@@ -1,0 +1,8 @@
+{
+  "builds": [
+    {
+      "src": "CSS WEB/css-prep-hub/next.config.ts",
+      "use": "@vercel/next"
+    }
+  ]
+}
