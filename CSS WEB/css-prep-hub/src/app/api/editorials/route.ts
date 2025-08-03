@@ -6,10 +6,7 @@ interface NotionTextContent {
   plain_text: string;
 }
 
-interface NotionPage {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  properties: Record<string, any>;
-}
+
 
 // Initialize Notion client
 const notion = new Client({
@@ -52,7 +49,8 @@ export async function GET(_request: NextRequest) {
 
     // Transform the data
     const editorials: Editorial[] = response.results
-      .map((page: NotionPage) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      .map((page: any) => {
         // Extract properties
         const titleProperty = page.properties['Title '];
         const authorProperty = page.properties['Author Name'];
