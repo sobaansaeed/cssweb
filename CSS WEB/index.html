@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Exam Prep Hub - Your Complete Preparation Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>CSS Prep Hub</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="newspapers.html" class="nav-link"><i class="fas fa-newspaper"></i>Newspapers</a></li>
+                <li><a href="resources.html" class="nav-link"><i class="fas fa-book"></i>Resources</a></li>
+                <li><a href="timeline.html" class="nav-link"><i class="fas fa-calendar-alt"></i>Timeline</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Master CSS Exams with Confidence</h1>
+                <p>Your comprehensive platform for CSS exam preparation with newspapers, resources, past papers, and expert guidance.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('resources')">Start Learning</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('newspapers')">Read Newspapers</button>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <h3 class="counter" data-target="500">0</h3>
+                    <p>Past Papers</p>
+                </div>
+                <div class="stat">
+                    <h3 class="counter" data-target="50">0</h3>
+                    <p>Subjects</p>
+                </div>
+                <div class="stat">
+                    <h3 class="counter" data-target="1000">0</h3>
+                    <p>Resources</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newspapers Section -->
+    <section id="newspapers" class="newspapers">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-newspaper"></i> Daily Newspapers</h2>
+                <p>Stay updated with current affairs from leading Pakistani newspapers</p>
+            </div>
+            
+            <div class="newspaper-filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="international">International</button>
+                <button class="filter-btn" data-category="national">National</button>
+                <button class="filter-btn" data-category="editorials">Editorials</button>
+            </div>
+
+            <div class="newspaper-blocks">
+                <div class="newspaper-block" data-newspaper="dawn">
+                    <div class="newspaper-block-header">
+                        <h3>Dawn</h3>
+                        <span class="date">Today</span>
+                    </div>
+                    <div class="newspaper-articles">
+                        <div class="article-item">
+                            <h4>Pakistan's Economic Recovery Plan</h4>
+                            <p>Comprehensive analysis of the government's new economic policies and their impact on various sectors.</p>
+                            <div class="article-tags">
+                                <span class="tag national">National</span>
+                                <span class="tag economy">Economy</span>
+                            </div>
+                            <a href="#" class="read-more">Read Full Article <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="article-item">
+                            <h4>Digital Pakistan Initiative Progress</h4>
+                            <p>Latest developments in Pakistan's digital transformation and technology adoption across government services.</p>
+                            <div class="article-tags">
+                                <span class="tag national">National</span>
+                                <span class="tag technology">Technology</span>
+                            </div>
+                            <a href="#" class="read-more">Read Full Article <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="newspaper-block" data-newspaper="news">
+                    <div class="newspaper-block-header">
+                        <h3>The News</h3>
+                        <span class="date">Today</span>
+                    </div>
+                    <div class="newspaper-articles">
+                        <div class="article-item">
+                            <h4>Global Climate Summit Outcomes</h4>
+                            <p>Key decisions and commitments made at the recent international climate conference and their implications.</p>
+                            <div class="article-tags">
+                                <span class="tag international">International</span>
+                                <span class="tag climate">Climate</span>
+                            </div>
+                            <a href="#" class="read-more">Read Full Article <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="article-item">
+                            <h4>Economic Policies and Market Impact</h4>
+                            <p>Analysis of recent economic decisions and their effects on Pakistan's financial markets and business sector.</p>
+                            <div class="article-tags">
+                                <span class="tag national">National</span>
+                                <span class="tag economy">Economy</span>
+                            </div>
+                            <a href="#" class="read-more">Read Full Article <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="newspaper-block" data-newspaper="tribune">
+                    <div class="newspaper-block-header">
+                        <h3>Express Tribune</h3>
+                        <span class="date">Today</span>
+                    </div>
+                    <div class="newspaper-articles">
+                        <div class="article-item">
+                            <h4>Education Reform: A Path Forward</h4>
+                            <p>Editorial analysis of the current education system and proposed reforms for better outcomes.</p>
+                            <div class="article-tags">
+                                <span class="tag editorials">Editorials</span>
+                                <span class="tag education">Education</span>
+                            </div>
+                            <a href="#" class="read-more">Read Full Article <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="article-item">
+                            <h4>Social Development Initiatives</h4>
+                            <p>Comprehensive coverage of social welfare programs and community development projects across Pakistan.</p>
+                            <div class="article-tags">
+                                <span class="tag national">National</span>
+                                <span class="tag social">Social</span>
+                            </div>
+                            <a href="#" class="read-more">Read Full Article <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-book"></i> CSS Resource Library</h2>
+                <p>Comprehensive study materials, past papers, and exam guidelines</p>
+            </div>
+
+            <div class="resource-categories">
+                <div class="resource-category">
+                    <div class="category-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>Past Papers</h3>
+                    <p>Complete archive of CSS exam papers from previous years</p>
+                    <div class="resource-count">500+ Papers</div>
+                    <button class="btn btn-outline" onclick="showResourceModal('past-papers')">Browse Papers</button>
+                </div>
+
+                <div class="resource-category">
+                    <div class="category-icon">
+                        <i class="fas fa-list-alt"></i>
+                    </div>
+                    <h3>Syllabus</h3>
+                    <p>Complete CSS syllabus with compulsory and optional subjects</p>
+                    <div class="resource-count">50+ Subjects</div>
+                    <button class="btn btn-outline" onclick="showResourceModal('syllabus')">View Syllabus</button>
+                </div>
+
+                <div class="resource-category">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Paper Pattern</h3>
+                    <p>Detailed exam pattern, marking scheme, and guidelines</p>
+                    <div class="resource-count">Updated 2024</div>
+                    <button class="btn btn-outline" onclick="showResourceModal('pattern')">View Pattern</button>
+                </div>
+
+                <div class="resource-category">
+                    <div class="category-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3>Study Materials</h3>
+                    <p>Subject-wise study guides, notes, and reference materials</p>
+                    <div class="resource-count">1000+ Resources</div>
+                    <button class="btn btn-outline" onclick="showResourceModal('materials')">Download</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="timeline">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-calendar-alt"></i> Exam Timeline & Notifications</h2>
+                <p>Stay updated with important dates and deadlines</p>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="date">15 Jan</span>
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Registration Opens</h3>
+                        <p>CSS exam registration portal opens for 2024 batch</p>
+                        <span class="timeline-status upcoming">Upcoming</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="date">28 Feb</span>
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Registration Deadline</h3>
+                        <p>Last date to submit CSS exam registration forms</p>
+                        <span class="timeline-status deadline">Deadline</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="date">15 Mar</span>
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Written Exam Starts</h3>
+                        <p>CSS written examination begins with compulsory papers</p>
+                        <span class="timeline-status exam">Exam</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="date">30 Apr</span>
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Written Exam Ends</h3>
+                        <p>Completion of all written examination papers</p>
+                        <span class="timeline-status exam">Exam</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="date">15 Jun</span>
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Results Expected</h3>
+                        <p>Written examination results are expected to be announced</p>
+                        <span class="timeline-status results">Results</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notification-signup">
+                <h3>Get Notified</h3>
+                <p>Stay updated with important deadlines and announcements</p>
+                <div class="signup-form">
+                    <input type="email" placeholder="Enter your email address">
+                    <button class="btn btn-primary">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CSS Prep Hub</h3>
+                    <p>Your comprehensive platform for CSS exam preparation with newspapers, resources, past papers, and expert guidance.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="newspapers.html">Newspapers</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="timeline.html">Timeline</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Past Papers</a></li>
+                        <li><a href="#">Study Guides</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Exam Pattern</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@cssprephub.com</li>
+                        <li><i class="fas fa-phone"></i> +92 300 1234567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Islamabad, Pakistan</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CSS Prep Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Resource Modal -->
+    <div id="resourceModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent">
+                <!-- Modal content will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

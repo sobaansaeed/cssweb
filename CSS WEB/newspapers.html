@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Newspapers - CSS Prep Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>CSS Prep Hub</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="newspapers.html" class="nav-link active"><i class="fas fa-newspaper"></i>Newspapers</a></li>
+                <li><a href="resources.html" class="nav-link"><i class="fas fa-book"></i>Resources</a></li>
+                <li><a href="timeline.html" class="nav-link"><i class="fas fa-calendar-alt"></i>Timeline</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-newspaper"></i> Daily Newspapers</h1>
+            <p>Stay updated with current affairs from leading Pakistani newspapers - Essential for CSS Current Affairs</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span>/</span> Newspapers
+            </div>
+        </div>
+    </section>
+
+    <!-- Newspapers Section -->
+    <section class="newspapers-page">
+        <div class="container">
+            <!-- Filters -->
+            <div class="newspaper-filters">
+                <button class="filter-btn active" data-category="all">All Newspapers</button>
+                <button class="filter-btn" data-category="dawn">Dawn</button>
+                <button class="filter-btn" data-category="news">The News</button>
+                <button class="filter-btn" data-category="tribune">Express Tribune</button>
+                <button class="filter-btn" data-category="nation">The Nation</button>
+                <button class="filter-btn" data-category="express">Daily Express</button>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="category-filters">
+                <button class="category-btn active" data-filter="all">All Categories</button>
+                <button class="category-btn" data-filter="international">International</button>
+                <button class="category-btn" data-filter="national">National</button>
+                <button class="category-btn" data-filter="editorials">Editorials</button>
+                <button class="category-btn" data-filter="economy">Economy</button>
+                <button class="category-btn" data-filter="politics">Politics</button>
+                <button class="category-btn" data-filter="education">Education</button>
+            </div>
+
+            <!-- Dawn Newspaper -->
+            <div class="newspaper-section" data-newspaper="dawn">
+                <div class="newspaper-header">
+                    <div class="newspaper-logo">
+                        <img src="https://via.placeholder.com/60x40/1a237e/white?text=DAWN" alt="Dawn">
+                        <div class="newspaper-info">
+                            <h2>Dawn</h2>
+                            <p>Pakistan's most widely circulated English language newspaper</p>
+                            <span class="update-time">Updated: Today, 8:00 AM</span>
+                        </div>
+                    </div>
+                    <a href="https://www.dawn.com" target="_blank" class="visit-btn">
+                        <i class="fas fa-external-link-alt"></i> Visit Website
+                    </a>
+                </div>
+
+                <div class="articles-grid">
+                    <article class="article-card" data-category="economy">
+                        <div class="article-image">
+                            <img src="https://via.placeholder.com/300x200/1565c0/white?text=Economic+Recovery" alt="Economic Recovery">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-tags">
+                                <span class="tag economy">Economy</span>
+                                <span class="tag national">National</span>
+                            </div>
+                            <h3>Pakistan's Economic Recovery Roadmap Unveiled</h3>
+                            <p>Government announces comprehensive economic reforms including fiscal consolidation, export promotion, and investment incentives to boost economic growth.</p>
+                            <div class="article-meta">
+                                <span class="author">By Economic Reporter</span>
+                                <span class="time">2 hours ago</span>
+                            </div>
+                            <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="politics">
+                        <div class="article-image">
+                            <img src="https://via.placeholder.com/300x200/2e7d32/white?text=Parliamentary+Session" alt="Parliament">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-tags">
+                                <span class="tag politics">Politics</span>
+                                <span class="tag national">National</span>
+                            </div>
+                            <h3>Parliamentary Session Discusses Key Legislation</h3>
+                            <p>National Assembly debates important bills including amendments to election laws and judicial reforms during today's session.</p>
+                            <div class="article-meta">
+                                <span class="author">By Political Correspondent</span>
+                                <span class="time">4 hours ago</span>
+                            </div>
+                            <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="editorials">
+                        <div class="article-image">
+                            <img src="https://via.placeholder.com/300x200/d32f2f/white?text=Editorial" alt="Editorial">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-tags">
+                                <span class="tag editorials">Editorial</span>
+                            </div>
+                            <h3>The Need for Educational Reform</h3>
+                            <p>Editorial analysis on the urgent need for comprehensive educational reforms to meet modern challenges and improve literacy rates.</p>
+                            <div class="article-meta">
+                                <span class="author">Editorial Board</span>
+                                <span class="time">6 hours ago</span>
+                            </div>
+                            <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- The News Newspaper -->
+            <div class="newspaper-section" data-newspaper="news">
+                <div class="newspaper-header">
+                    <div class="newspaper-logo">
+                        <img src="https://via.placeholder.com/60x40/c62828/white?text=NEWS" alt="The News">
+                        <div class="newspaper-info">
+                            <h2>The News</h2>
+                            <p>Leading English daily with comprehensive coverage</p>
+                            <span class="update-time">Updated: Today, 7:30 AM</span>
+                        </div>
+                    </div>
+                    <a href="https://www.thenews.com.pk" target="_blank" class="visit-btn">
+                        <i class="fas fa-external-link-alt"></i> Visit Website
+                    </a>
+                </div>
+
+                <div class="articles-grid">
+                    <article class="article-card" data-category="international">
+                        <div class="article-image">
+                            <img src="https://via.placeholder.com/300x200/388e3c/white?text=Climate+Summit" alt="Climate Summit">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-tags">
+                                <span class="tag international">International</span>
+                                <span class="tag environment">Environment</span>
+                            </div>
+                            <h3>Global Climate Summit: Key Outcomes for Pakistan</h3>
+                            <p>Analysis of recent climate agreements and their implications for Pakistan's environmental policies and carbon reduction targets.</p>
+                            <div class="article-meta">
+                                <span class="author">By Environment Correspondent</span>
+                                <span class="time">3 hours ago</span>
+                            </div>
+                            <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="education">
+                        <div class="article-image">
+                            <img src="https://via.placeholder.com/300x200/7b1fa2/white?text=Education+Policy" alt="Education">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-tags">
+                                <span class="tag education">Education</span>
+                                <span class="tag national">National</span>
+                            </div>
+                            <h3>New Education Policy Framework Announced</h3>
+                            <p>Ministry of Education unveils comprehensive policy reforms focusing on digital literacy, teacher training, and curriculum modernization.</p>
+                            <div class="article-meta">
+                                <span class="author">By Education Reporter</span>
+                                <span class="time">5 hours ago</span>
+                            </div>
+                            <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Express Tribune -->
+            <div class="newspaper-section" data-newspaper="tribune">
+                <div class="newspaper-header">
+                    <div class="newspaper-logo">
+                        <img src="https://via.placeholder.com/60x40/f57c00/white?text=ET" alt="Express Tribune">
+                        <div class="newspaper-info">
+                            <h2>Express Tribune</h2>
+                            <p>Pakistan's premier English newspaper with international perspective</p>
+                            <span class="update-time">Updated: Today, 8:30 AM</span>
+                        </div>
+                    </div>
+                    <a href="https://tribune.com.pk" target="_blank" class="visit-btn">
+                        <i class="fas fa-external-link-alt"></i> Visit Website
+                    </a>
+                </div>
+
+                <div class="articles-grid">
+                    <article class="article-card" data-category="economy">
+                        <div class="article-image">
+                            <img src="https://via.placeholder.com/300x200/1976d2/white?text=Trade+Relations" alt="Trade">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-tags">
+                                <span class="tag economy">Economy</span>
+                                <span class="tag international">International</span>
+                            </div>
+                            <h3>Pakistan-China Trade Relations Strengthen</h3>
+                            <p>Latest developments in CPEC projects and bilateral trade agreements boost economic cooperation between Pakistan and China.</p>
+                            <div class="article-meta">
+                                <span class="author">By Business Correspondent</span>
+                                <span class="time">1 hour ago</span>
+                            </div>
+                            <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="politics">
+                        <div class="article-image">
+                            <img src="https://via.placeholder.com/300x200/5d4037/white?text=Provincial+Govt" alt="Provincial Government">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-tags">
+                                <span class="tag politics">Politics</span>
+                                <span class="tag governance">Governance</span>
+                            </div>
+                            <h3>Provincial Governments Focus on Development</h3>
+                            <p>Analysis of development projects and governance initiatives across Pakistan's provinces with focus on public service delivery.</p>
+                            <div class="article-meta">
+                                <span class="author">By Provincial Correspondent</span>
+                                <span class="time">3 hours ago</span>
+                            </div>
+                            <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Additional Newspapers -->
+            <div class="newspaper-section" data-newspaper="nation">
+                <div class="newspaper-header">
+                    <div class="newspaper-logo">
+                        <img src="https://via.placeholder.com/60x40/4a148c/white?text=NATION" alt="The Nation">
+                        <div class="newspaper-info">
+                            <h2>The Nation</h2>
+                            <p>Independent voice with comprehensive national coverage</p>
+                            <span class="update-time">Updated: Today, 7:00 AM</span>
+                        </div>
+                    </div>
+                    <a href="https://nation.com.pk" target="_blank" class="visit-btn">
+                        <i class="fas fa-external-link-alt"></i> Visit Website
+                    </a>
+                </div>
+
+                <div class="articles-grid">
+                    <article class="article-card" data-category="national">
+                        <div class="article-image">
+                            <img src="https://via.placeholder.com/300x200/00695c/white?text=Healthcare" alt="Healthcare">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-tags">
+                                <span class="tag national">National</span>
+                                <span class="tag healthcare">Healthcare</span>
+                            </div>
+                            <h3>Healthcare Infrastructure Development Plans</h3>
+                            <p>Government announces major healthcare reforms and infrastructure development to improve medical facilities across the country.</p>
+                            <div class="article-meta">
+                                <span class="author">By Health Reporter</span>
+                                <span class="time">4 hours ago</span>
+                            </div>
+                            <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CSS Prep Hub</h3>
+                    <p>Your comprehensive platform for CSS exam preparation with newspapers, resources, past papers, and expert guidance.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="newspapers.html">Newspapers</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="timeline.html">Timeline</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newspapers</h4>
+                    <ul>
+                        <li><a href="#dawn">Dawn</a></li>
+                        <li><a href="#news">The News</a></li>
+                        <li><a href="#tribune">Express Tribune</a></li>
+                        <li><a href="#nation">The Nation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@cssprephub.com</li>
+                        <li><i class="fas fa-phone"></i> +92 300 1234567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Islamabad, Pakistan</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CSS Prep Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

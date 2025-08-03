@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Resources - CSS Prep Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>CSS Prep Hub</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="newspapers.html" class="nav-link"><i class="fas fa-newspaper"></i>Newspapers</a></li>
+                <li><a href="resources.html" class="nav-link active"><i class="fas fa-book"></i>Resources</a></li>
+                <li><a href="timeline.html" class="nav-link"><i class="fas fa-calendar-alt"></i>Timeline</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-book"></i> CSS Study Resources</h1>
+            <p>Comprehensive study materials, past papers, syllabus, and exam guidelines for CSS preparation</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span>/</span> Resources
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Categories -->
+    <section class="resources-page">
+        <div class="container">
+            <!-- Resource Categories -->
+            <div class="resource-categories-grid">
+                <div class="resource-category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>Past Papers</h3>
+                    <p>Complete archive of CSS exam papers from 2010 to 2024</p>
+                    <div class="resource-stats">
+                        <span class="stat"><i class="fas fa-file"></i> 500+ Papers</span>
+                        <span class="stat"><i class="fas fa-calendar"></i> 15 Years</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="showResourceSection('past-papers')">Browse Papers</button>
+                </div>
+
+                <div class="resource-category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-list-alt"></i>
+                    </div>
+                    <h3>Complete Syllabus</h3>
+                    <p>Detailed CSS syllabus with compulsory and optional subjects</p>
+                    <div class="resource-stats">
+                        <span class="stat"><i class="fas fa-book"></i> 50+ Subjects</span>
+                        <span class="stat"><i class="fas fa-star"></i> Updated 2024</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="showResourceSection('syllabus')">View Syllabus</button>
+                </div>
+
+                <div class="resource-category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Exam Pattern</h3>
+                    <p>Detailed exam pattern, marking scheme, and guidelines</p>
+                    <div class="resource-stats">
+                        <span class="stat"><i class="fas fa-info-circle"></i> Latest Pattern</span>
+                        <span class="stat"><i class="fas fa-check"></i> FPSC Official</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="showResourceSection('pattern')">View Pattern</button>
+                </div>
+
+                <div class="resource-category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3>Study Materials</h3>
+                    <p>Subject-wise study guides, notes, and reference materials</p>
+                    <div class="resource-stats">
+                        <span class="stat"><i class="fas fa-folder"></i> 1000+ Files</span>
+                        <span class="stat"><i class="fas fa-download"></i> Free Access</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="showResourceSection('materials')">Download</button>
+                </div>
+            </div>
+
+            <!-- Past Papers Section -->
+            <div id="past-papers" class="resource-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-file-pdf"></i> Past Papers Collection</h2>
+                    <p>Complete archive of CSS examination papers organized by year and subject</p>
+                </div>
+
+                <div class="papers-filter">
+                    <div class="filter-group">
+                        <label>Filter by Year:</label>
+                        <select class="filter-select">
+                            <option value="all">All Years</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Filter by Subject:</label>
+                        <select class="filter-select">
+                            <option value="all">All Subjects</option>
+                            <option value="english">English Essay & Composition</option>
+                            <option value="general-knowledge">General Knowledge</option>
+                            <option value="pakistan-affairs">Pakistan Affairs</option>
+                            <option value="current-affairs">Current Affairs</option>
+                            <option value="islamic-studies">Islamic Studies</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="papers-grid">
+                    <div class="paper-card">
+                        <div class="paper-header">
+                            <h4>English Essay & Composition</h4>
+                            <span class="year-badge">2024</span>
+                        </div>
+                        <div class="paper-details">
+                            <p><i class="fas fa-calendar"></i> Exam Date: March 15, 2024</p>
+                            <p><i class="fas fa-clock"></i> Duration: 3 Hours</p>
+                            <p><i class="fas fa-star"></i> Max Marks: 100</p>
+                        </div>
+                        <div class="paper-actions">
+                            <button class="btn btn-outline">View Paper</button>
+                            <button class="btn btn-primary">Download PDF</button>
+                        </div>
+                    </div>
+
+                    <div class="paper-card">
+                        <div class="paper-header">
+                            <h4>General Knowledge</h4>
+                            <span class="year-badge">2024</span>
+                        </div>
+                        <div class="paper-details">
+                            <p><i class="fas fa-calendar"></i> Exam Date: March 17, 2024</p>
+                            <p><i class="fas fa-clock"></i> Duration: 3 Hours</p>
+                            <p><i class="fas fa-star"></i> Max Marks: 100</p>
+                        </div>
+                        <div class="paper-actions">
+                            <button class="btn btn-outline">View Paper</button>
+                            <button class="btn btn-primary">Download PDF</button>
+                        </div>
+                    </div>
+
+                    <div class="paper-card">
+                        <div class="paper-header">
+                            <h4>Pakistan Affairs</h4>
+                            <span class="year-badge">2024</span>
+                        </div>
+                        <div class="paper-details">
+                            <p><i class="fas fa-calendar"></i> Exam Date: March 19, 2024</p>
+                            <p><i class="fas fa-clock"></i> Duration: 3 Hours</p>
+                            <p><i class="fas fa-star"></i> Max Marks: 100</p>
+                        </div>
+                        <div class="paper-actions">
+                            <button class="btn btn-outline">View Paper</button>
+                            <button class="btn btn-primary">Download PDF</button>
+                        </div>
+                    </div>
+
+                    <div class="paper-card">
+                        <div class="paper-header">
+                            <h4>Current Affairs</h4>
+                            <span class="year-badge">2024</span>
+                        </div>
+                        <div class="paper-details">
+                            <p><i class="fas fa-calendar"></i> Exam Date: March 21, 2024</p>
+                            <p><i class="fas fa-clock"></i> Duration: 3 Hours</p>
+                            <p><i class="fas fa-star"></i> Max Marks: 100</p>
+                        </div>
+                        <div class="paper-actions">
+                            <button class="btn btn-outline">View Paper</button>
+                            <button class="btn btn-primary">Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Syllabus Section -->
+            <div id="syllabus" class="resource-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-list-alt"></i> CSS Syllabus 2024</h2>
+                    <p>Complete syllabus for Central Superior Services examination</p>
+                </div>
+
+                <div class="syllabus-tabs">
+                    <button class="tab-btn active" data-tab="compulsory">Compulsory Subjects</button>
+                    <button class="tab-btn" data-tab="optional">Optional Subjects</button>
+                    <button class="tab-btn" data-tab="marks">Marks Distribution</button>
+                </div>
+
+                <div class="tab-content active" id="compulsory">
+                    <div class="subjects-grid">
+                        <div class="subject-card">
+                            <h4>English Essay & Composition</h4>
+                            <p>Max Marks: 100</p>
+                            <ul>
+                                <li>Essay Writing (600-700 words)</li>
+                                <li>Précis Writing</li>
+                                <li>Comprehension</li>
+                                <li>Grammar & Usage</li>
+                            </ul>
+                            <button class="btn btn-outline">View Details</button>
+                        </div>
+
+                        <div class="subject-card">
+                            <h4>General Knowledge</h4>
+                            <p>Max Marks: 100</p>
+                            <ul>
+                                <li>Geography (Physical & Human)</li>
+                                <li>History (World & Pakistan)</li>
+                                <li>Science & Technology</li>
+                                <li>Arts & Literature</li>
+                            </ul>
+                            <button class="btn btn-outline">View Details</button>
+                        </div>
+
+                        <div class="subject-card">
+                            <h4>Pakistan Affairs</h4>
+                            <p>Max Marks: 100</p>
+                            <ul>
+                                <li>History of Pakistan Movement</li>
+                                <li>Constitutional Development</li>
+                                <li>Geography of Pakistan</li>
+                                <li>Economic Development</li>
+                            </ul>
+                            <button class="btn btn-outline">View Details</button>
+                        </div>
+
+                        <div class="subject-card">
+                            <h4>Current Affairs</h4>
+                            <p>Max Marks: 100</p>
+                            <ul>
+                                <li>National Affairs</li>
+                                <li>International Relations</li>
+                                <li>Economic Issues</li>
+                                <li>Social & Political Developments</li>
+                            </ul>
+                            <button class="btn btn-outline">View Details</button>
+                        </div>
+
+                        <div class="subject-card">
+                            <h4>Islamic Studies/Ethics</h4>
+                            <p>Max Marks: 100</p>
+                            <ul>
+                                <li>Islamic History & Civilization</li>
+                                <li>Islamic Jurisprudence</li>
+                                <li>Ethics & Moral Philosophy</li>
+                                <li>Contemporary Islamic Issues</li>
+                            </ul>
+                            <button class="btn btn-outline">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="optional">
+                    <p>Choose any 6 subjects from the following optional subjects (600 marks total):</p>
+                    <div class="optional-subjects">
+                        <div class="subject-group">
+                            <h4>Group A - Languages & Literature</h4>
+                            <ul>
+                                <li>English Literature</li>
+                                <li>Urdu</li>
+                                <li>Persian</li>
+                                <li>Arabic</li>
+                            </ul>
+                        </div>
+                        <div class="subject-group">
+                            <h4>Group B - Social Sciences</h4>
+                            <ul>
+                                <li>Political Science</li>
+                                <li>International Relations</li>
+                                <li>Public Administration</li>
+                                <li>Sociology</li>
+                                <li>Psychology</li>
+                                <li>Philosophy</li>
+                                <li>Anthropology</li>
+                            </ul>
+                        </div>
+                        <div class="subject-group">
+                            <h4>Group C - Economics & Commerce</h4>
+                            <ul>
+                                <li>Economics</li>
+                                <li>Business Administration</li>
+                                <li>Accounting & Auditing</li>
+                            </ul>
+                        </div>
+                        <div class="subject-group">
+                            <h4>Group D - Natural Sciences</h4>
+                            <ul>
+                                <li>Mathematics</li>
+                                <li>Statistics</li>
+                                <li>Physics</li>
+                                <li>Chemistry</li>
+                                <li>Botany</li>
+                                <li>Zoology</li>
+                                <li>Geology</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="marks">
+                    <div class="marks-table">
+                        <h4>Total Marks Distribution</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Component</th>
+                                    <th>Subjects</th>
+                                    <th>Marks per Subject</th>
+                                    <th>Total Marks</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Compulsory Subjects</td>
+                                    <td>5</td>
+                                    <td>100</td>
+                                    <td>500</td>
+                                </tr>
+                                <tr>
+                                    <td>Optional Subjects</td>
+                                    <td>6</td>
+                                    <td>100</td>
+                                    <td>600</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td><strong>Grand Total</strong></td>
+                                    <td><strong>11</strong></td>
+                                    <td><strong>-</strong></td>
+                                    <td><strong>1100</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Study Materials Section -->
+            <div id="materials" class="resource-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-download"></i> Study Materials</h2>
+                    <p>Download comprehensive study guides, notes, and reference materials</p>
+                </div>
+
+                <div class="materials-grid">
+                    <div class="material-card">
+                        <div class="material-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h4>Complete Study Guide</h4>
+                        <p>Comprehensive guide covering all compulsory subjects</p>
+                        <span class="file-size">25.4 MB</span>
+                        <button class="btn btn-primary">Download PDF</button>
+                    </div>
+
+                    <div class="material-card">
+                        <div class="material-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h4>Current Affairs Digest</h4>
+                        <p>Monthly digest of important current affairs</p>
+                        <span class="file-size">12.8 MB</span>
+                        <button class="btn btn-primary">Download PDF</button>
+                    </div>
+
+                    <div class="material-card">
+                        <div class="material-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h4>Pakistan Affairs Notes</h4>
+                        <p>Detailed notes on Pakistan's history and affairs</p>
+                        <span class="file-size">18.2 MB</span>
+                        <button class="btn btn-primary">Download PDF</button>
+                    </div>
+
+                    <div class="material-card">
+                        <div class="material-icon">
+                            <i class="fas fa-pen"></i>
+                        </div>
+                        <h4>Essay Writing Guide</h4>
+                        <p>Comprehensive guide to essay writing techniques</p>
+                        <span class="file-size">8.5 MB</span>
+                        <button class="btn btn-primary">Download PDF</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CSS Prep Hub</h3>
+                    <p>Your comprehensive platform for CSS exam preparation with newspapers, resources, past papers, and expert guidance.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="newspapers.html">Newspapers</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="timeline.html">Timeline</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#past-papers">Past Papers</a></li>
+                        <li><a href="#syllabus">Syllabus</a></li>
+                        <li><a href="#materials">Study Materials</a></li>
+                        <li><a href="#pattern">Exam Pattern</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@cssprephub.com</li>
+                        <li><i class="fas fa-phone"></i> +92 300 1234567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Islamabad, Pakistan</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CSS Prep Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
