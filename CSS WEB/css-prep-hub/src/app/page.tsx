@@ -218,7 +218,7 @@ const HomePage: React.FC = () => {
             Ready to Start Your CSS Journey with CSS KRO?
           </h2>
           <p className="text-xl mb-8 text-blue-100">
-            Join thousands of students who are preparing for CSS exams with CSS KRO's comprehensive platform
+            Join thousands of students who are preparing for CSS exams with CSS KRO&apos;s comprehensive platform
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
@@ -232,7 +232,7 @@ const HomePage: React.FC = () => {
               href="/newspapers"
               className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-200"
             >
-              Read Today's News
+              Read Today&apos;s News
             </Link>
           </div>
         </div>

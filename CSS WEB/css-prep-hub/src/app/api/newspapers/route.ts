@@ -1,6 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Client } from '@notionhq/client';
 
+// Type definitions for Notion API
+interface NotionTextContent {
+  plain_text: string;
+}
+
+interface NotionPage {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  properties: Record<string, any>;
+}
+
 // Initialize Notion client
 const notion = new Client({
   auth: process.env.NOTION_API_KEY,
@@ -13,7 +23,8 @@ export interface Newspaper {
   fileUrl: string;
 }
 
-export async function GET(request: NextRequest) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export async function GET(_request: NextRequest) {
   try {
     const databaseId = process.env.NOTION_DATABASE_ID;
     
@@ -37,7 +48,7 @@ export async function GET(request: NextRequest) {
 
     // Transform the data
     const newspapers: Newspaper[] = response.results
-      .map((page: any) => {
+      .map((page: NotionPage) => {
         // Extract properties
         const titleProperty = page.properties.Name;
         const dateProperty = page.properties.Date;
@@ -54,7 +65,7 @@ export async function GET(request: NextRequest) {
             title = titleProperty.rich_text[0].plain_text;
           } else if (titleProperty.type === 'title' && titleProperty.title) {
             // Handle Title property
-            title = titleProperty.title.map((t: any) => t.plain_text).join('');
+            title = titleProperty.title.map((t: NotionTextContent) => t.plain_text).join('');
           }
         }
 
@@ -106,7 +117,8 @@ export async function GET(request: NextRequest) {
 }
 
 // Optional: Add CORS headers if needed
-export async function OPTIONS(request: NextRequest) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export async function OPTIONS(_request: NextRequest) {
   return new NextResponse(null, {
     status: 200,
     headers: {

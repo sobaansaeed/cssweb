@@ -122,7 +122,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ title, fileUrl, date, isOpen, onC
         {/* Fallback message */}
         <div className="p-4 text-center text-gray-600 text-sm border-t border-gray-200">
           <p>
-            If the PDF doesn't display properly,{' '}
+            If the PDF doesn&apos;t display properly,{' '}
             <button
               onClick={handleDownload}
               className="text-blue-600 hover:text-blue-700 underline"

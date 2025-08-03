@@ -1,6 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Client } from '@notionhq/client';
 
+// Type definitions for Notion API
+interface NotionTextContent {
+  plain_text: string;
+}
+
+interface NotionPage {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  properties: Record<string, any>;
+}
+
 // Initialize Notion client
 const notion = new Client({
   auth: process.env.NOTION_API_KEY,
@@ -15,7 +25,8 @@ export interface Editorial {
   fileUrl: string;
 }
 
-export async function GET(request: NextRequest) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export async function GET(_request: NextRequest) {
   try {
     const databaseId = process.env.NOTION_EDITORIAL_DATABASE_ID;
     
@@ -41,7 +52,7 @@ export async function GET(request: NextRequest) {
 
     // Transform the data
     const editorials: Editorial[] = response.results
-      .map((page: any) => {
+      .map((page: NotionPage) => {
         // Extract properties
         const titleProperty = page.properties['Title '];
         const authorProperty = page.properties['Author Name'];
@@ -55,11 +66,11 @@ export async function GET(request: NextRequest) {
         if (titleProperty) {
           // Handle Title property type (most common for Notion title fields)
           if (titleProperty.type === 'title' && titleProperty.title && titleProperty.title.length > 0) {
-            title = titleProperty.title.map((t: any) => t.plain_text).join('');
+            title = titleProperty.title.map((t: NotionTextContent) => t.plain_text).join('');
           }
           // Handle direct title array
           else if (titleProperty.title && Array.isArray(titleProperty.title) && titleProperty.title.length > 0) {
-            title = titleProperty.title.map((t: any) => t.plain_text).join('');
+            title = titleProperty.title.map((t: NotionTextContent) => t.plain_text).join('');
           }
           // Handle Rich Text property type
           else if (titleProperty.rich_text && titleProperty.rich_text.length > 0) {
@@ -158,7 +169,8 @@ export async function GET(request: NextRequest) {
 }
 
 // Optional: Add CORS headers if needed
-export async function OPTIONS(request: NextRequest) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export async function OPTIONS(_request: NextRequest) {
   return new NextResponse(null, {
     status: 200,
     headers: {

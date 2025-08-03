@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Download, BookOpen, Star, Filter, Search, Tag, FileText, Clock, Users } from 'lucide-react';
+import { Download, BookOpen, Star, Search, Tag, FileText, Clock, Users } from 'lucide-react';
 
 interface StudyMaterial {
   id: string;

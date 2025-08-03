@@ -1,19 +1,10 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { ExternalLink, Clock, Tag, FileText, Eye, Download } from 'lucide-react';
+import { ExternalLink, Clock, FileText, Eye, Download } from 'lucide-react';
 import PDFViewer from '@/components/PDFViewer';
 
-interface Article {
-  id: string;
-  title: string;
-  summary: string;
-  category: string[];
-  author: string;
-  timeAgo: string;
-  newspaper: string;
-  url: string;
-}
+
 
 interface Newspaper {
   id: string;
@@ -315,7 +306,7 @@ const NewspapersPage: React.FC = () => {
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-white rounded-lg p-6 shadow-lg text-center">
             <h3 className="font-semibold text-gray-900 mb-2">Dawn</h3>
-            <p className="text-sm text-gray-600 mb-4">Pakistan's most widely circulated English newspaper</p>
+            <p className="text-sm text-gray-600 mb-4">Pakistan&apos;s most widely circulated English newspaper</p>
             <a
               href="https://www.dawn.com"
               target="_blank"
@@ -343,7 +334,7 @@ const NewspapersPage: React.FC = () => {
           
           <div className="bg-white rounded-lg p-6 shadow-lg text-center">
             <h3 className="font-semibold text-gray-900 mb-2">Express Tribune</h3>
-            <p className="text-sm text-gray-600 mb-4">Pakistan's premier English newspaper</p>
+            <p className="text-sm text-gray-600 mb-4">Pakistan&apos;s premier English newspaper</p>
             <a
               href="https://tribune.com.pk"
               target="_blank"

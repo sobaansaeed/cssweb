@@ -278,7 +278,7 @@ const TimelinePage: React.FC = () => {
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">CSS 2024 Complete Timeline</h2>
           
           <div className="space-y-8">
-            {timelineEvents.map((event, index) => (
+            {timelineEvents.map((event) => (
               <div key={event.id} className={`border-l-4 pl-8 pb-8 ${getStatusColor(event.status)}`}>
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
